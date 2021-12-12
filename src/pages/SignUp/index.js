@@ -55,6 +55,13 @@ const styles = StyleSheet.create({
         backgroundColor:'green',
         justifyContent:'center',
         alignItems:'center',
-        paddingTop:10
+        paddingTop:10,
+        borderWidth:1,
+        borderColor:'#8D92A3',
+        borderStyle:'dashed',
+        borderRadius:110,
+        width:110,
+        height:100,
+        justifyContent:'center',
     }
 })

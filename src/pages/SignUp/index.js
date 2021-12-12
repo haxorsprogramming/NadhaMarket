@@ -2,12 +2,12 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { TextInput, Header, Button, Gap } from '../../components';
 
-const SignUp = () => {
+const SignUp = ({navigation}) => {
     return (
         <View style={styles.page}>
             <Header title="Sign Up" subTitle="Daftarkan diri kamu" onBack={() => {}}/>
             <View style={styles.container}>
-                <View>
+                <View style={styles.photoGit}>
                     <View style={styles.photoContainer}>
                         <Text style={styles.addPhoto}>Add Photo</Text>
                     </View>
@@ -18,7 +18,8 @@ const SignUp = () => {
                 <Gap height={16} />
                 <TextInput label='Password' placeholder='Password'/>
                 <Gap height={24} />
-                <Button text="Continue"/>
+                <Button text="Continue" onPress={() => navigation.navigate('SignUpAddress')}/>
+                <Gap height={24} />
             </View>
         </View>
     )
@@ -39,7 +40,8 @@ const styles = StyleSheet.create({
     },
     addPhoto : {
         fontSize:14,
-        color : '#8D92A3'
+        color : '#8D92A3',
+        textAlign:'center'
     },
     photoContainer : {
         width:90,
@@ -48,5 +50,11 @@ const styles = StyleSheet.create({
         padding:24,
         borderRadius:90,
         textAlign:'center'
+    },
+    photoGit : {
+        backgroundColor:'green',
+        justifyContent:'center',
+        alignItems:'center',
+        paddingTop:10
     }
 })

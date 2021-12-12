@@ -1,0 +1,6 @@
+menjalankan metro
+- yarn start
+
+running emulator 
+- yarn run android
+
